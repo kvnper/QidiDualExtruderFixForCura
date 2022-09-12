@@ -1,7 +1,7 @@
 # Cura PostProcessingPlugin Script - Qidi Dual Extruder Fix For Cura
 # Author:   Kevin Pereira
 # Date:     September 13, 2022
-# Version: 	1.0
+# Version: 	1.0.0
 
 # Description:  Removes the gcode command "T0" that Cura inserts before the start gcode
 #		when Cura automatically sets the temperatures (this occurs when the
