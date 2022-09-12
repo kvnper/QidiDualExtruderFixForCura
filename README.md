@@ -36,6 +36,19 @@ After:
 
 
 
+First extruder disabled, second extruder enabled, before and after using the postprocessing script
+
+
+Before:
+
+![image](https://user-images.githubusercontent.com/47488385/189697002-34cd1bb7-e47b-4edd-8c41-3ef57bbd26cf.png)
+
+
+After:
+
+![image](https://user-images.githubusercontent.com/47488385/189697025-2a338d30-d0cf-4844-ba33-8280e271a612.png)
+
+
 First extruder enabled, second extruder enabled, before and after using the postprocessing script
 
 
