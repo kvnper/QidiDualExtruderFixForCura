@@ -9,6 +9,15 @@ This script removes the gcode command "T0" that Cura inserts before the start gc
 This is needed when using the QIDI I-Fast printer, otherwise the added "T0" gcode will trigger the printer to execute the internal firmware toolchange gcode, which moves the whole extruder towards the printer sidewall to mechanically engage the tool. If the extruder position is not correct this will cause the extruder to continously bang against the sidewall.
 
 
+Usage:
+-------------------
+1. Close Cura
+2. Place the file 'QidiDualExtruderFixForCura.py' in the script folder in Cura's configuration folder.
+3. Open Cura
+4. Remove the bed and nozzle temperature setters in the start gcode. Copy the first line of the start gcode, you'll need it in step 6.
+5. Enable this post processing script from the toolbar menu: Extensions -> Post Processing -> Modify G-Code -> Add a Script -> Qidi Dual Extruder Fix For Cura
+6. Paste the first line of the start gcode into the field 'First line of start GCode'
+
 
 Examples:
 -------------------
