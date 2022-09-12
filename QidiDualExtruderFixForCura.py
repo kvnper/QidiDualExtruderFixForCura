@@ -1,6 +1,7 @@
-# Cura PostProcessingPlugin - Qidi Dual Extruder Fix For Cura
+# Cura PostProcessingPlugin Script - Qidi Dual Extruder Fix For Cura
 # Author:   Kevin Pereira
 # Date:     September 13, 2022
+# Version: 	1.0
 
 # Description:  Removes the gcode command "T0" that Cura inserts before the start gcode
 #		when Cura automatically sets the temperatures (this occurs when the
@@ -52,8 +53,9 @@ class QidiDualExtruderFixForCura(Script):
 
 	def execute(self, data):
 		start_gcode_string = self.getSettingValueByKey("firstLineOfStartGcode")
-		tool_search_string = "T0"
-		temp_tool_insert_string = "T0 "
+		tool_search_string_t0 = "T0"
+		tool_search_string_t1 = "T1"
+		tool_index = 0
 		
 		m104_search_gcode = "M104 S"
 		m109_search_gcode = "M109 S"
@@ -69,14 +71,15 @@ class QidiDualExtruderFixForCura(Script):
 					end_found = True
 					break
 				elif not tool_gcode_found:
-					if line.startswith(tool_search_string):
+					if line.startswith(tool_search_string_t0) or line.startswith(tool_search_string_t1):
 						line_index = lines.index(line)
+						tool_index = lines[line_index][1]
 						lines[line_index] = ""
 						tool_gcode_found = True
 				else:
 					if line.startswith(m104_search_gcode) or line.startswith(m109_search_gcode):
 						line_index = lines.index(line)
-						lines[line_index] = lines[line_index][:5] + temp_tool_insert_string + lines[line_index][5:]
+						lines[line_index] = lines[line_index][:5] + "T" + tool_index + " " + lines[line_index][5:]
 			final_lines = "\n".join(lines)
 			data[layer_index] = final_lines
 			if end_found:
