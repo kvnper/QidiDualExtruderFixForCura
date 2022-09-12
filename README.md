@@ -14,7 +14,7 @@ Usage:
 3. Close Cura
 4. Place the file 'QidiDualExtruderFixForCura.py' in the script folder in Cura's configuration folder.
 5. Open Cura
-6. Remove the bed and nozzle temperature setters in the start gcode or use the start gcode below these steps. Copy the first line of the start gcode, you'll need it in step 6.
+6. Remove the bed and nozzle temperature setters in the start gcode or use the start gcode below these steps (for QIDI I-Fast only). Copy the first line of the start gcode, you'll need it in step 6.
 7. Enable this post processing script from the toolbar menu: Extensions -> Post Processing -> Modify G-Code -> Add a Script -> Qidi Dual Extruder Fix For Cura
 8. Paste the first line of the start gcode into the field 'First line of start GCode'
 
