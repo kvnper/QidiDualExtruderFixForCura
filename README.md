@@ -34,7 +34,7 @@ G1 X5 E0 F2400
 ; --- end of start gcode ---
 ```
 
-Examples:
+GCode Result Examples:
 -------------------
 
 First extruder enabled, second extruder disabled, before and after using the postprocessing script
