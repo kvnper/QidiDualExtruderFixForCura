@@ -15,17 +15,26 @@ Examples:
 
 First extruder enabled, second extruder disabled, before and after using the postprocessing script
 
-Before: 
+
+Before:
+
 ![image](https://user-images.githubusercontent.com/47488385/189691246-4c852e6f-bf67-4383-a249-a59ac32e4db7.png)
 
+
 After:
+
 ![image](https://user-images.githubusercontent.com/47488385/189691310-b71f05ac-14e5-4c58-8ab9-397431bf02be.png)
+
 
 
 First extruder enabled, second extruder enabled, before and after using the postprocessing script
 
+
 Before:
+
 ![image](https://user-images.githubusercontent.com/47488385/189691338-f5926a31-dfed-4602-8a36-69d78ce6c085.png)
 
+
 After:
+
 ![image](https://user-images.githubusercontent.com/47488385/189691370-ea5b05e7-a6d7-4ed0-833e-02b4fd2c267a.png)
