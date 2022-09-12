@@ -9,13 +9,28 @@ This is needed when using the QIDI I-Fast printer, otherwise the added "T0" gcod
 
 Usage:
 -------------------
-1. Close Cura
-2. Place the file 'QidiDualExtruderFixForCura.py' in the script folder in Cura's configuration folder.
-3. Open Cura
-4. Remove the bed and nozzle temperature setters in the start gcode. Copy the first line of the start gcode, you'll need it in step 6.
-5. Enable this post processing script from the toolbar menu: Extensions -> Post Processing -> Modify G-Code -> Add a Script -> Qidi Dual Extruder Fix For Cura
-6. Paste the first line of the start gcode into the field 'First line of start GCode'
+1. In Cura, go to the toolbar menu Help -> Show Configuration Folder. 
+2. A folder should have opened, now open the 'scripts' folder, you'll need this for step 4.
+3. Close Cura
+4. Place the file 'QidiDualExtruderFixForCura.py' in the script folder in Cura's configuration folder.
+5. Open Cura
+6. Remove the bed and nozzle temperature setters in the start gcode or use the start gcode below these steps. Copy the first line of the start gcode, you'll need it in step 6.
+7. Enable this post processing script from the toolbar menu: Extensions -> Post Processing -> Modify G-Code -> Add a Script -> Qidi Dual Extruder Fix For Cura
+8. Paste the first line of the start gcode into the field 'First line of start GCode'
 
+Start GCode for the I-Fast
+-------------------
+G28
+G0 X0 Y0 Z50 F3600
+G0 X0 Y6 Z0.3 F3600
+T1
+G92 E-19
+G1 X{machine_width} E0 F2400
+T0
+G92 E-19
+G0 X{machine_width} Y4 F3600
+G1 X5 E0 F2400
+; --- end of start gcode ---
 
 Examples:
 -------------------
