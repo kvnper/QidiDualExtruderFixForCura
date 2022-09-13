@@ -1,4 +1,4 @@
-# Cura-PostProcessing-Plugin_QidiDualExtruderFixForCura
+# Cura PostProcessing Plugin: Qidi Dual Extruder Fix For Cura
 A Post Processing script for Ultimaker's Cura to fix the issue with QIDI 3D printers with dual extruders
 
 
