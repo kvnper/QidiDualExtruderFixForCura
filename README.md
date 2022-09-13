@@ -25,12 +25,6 @@ Start GCode for the QIDI I-Fast for Cura
 G28
 G0 X0 Y0 Z50 F3600
 G0 X0 Y6 Z0.3 F3600
-T1
-G92 E-19
-G1 X{machine_width} E0 F2400
-T0
-G92 E-19
-G0 X{machine_width} Y4 F3600
 G1 X5 E0 F2400
 ; --- end of start gcode ---
 ```
