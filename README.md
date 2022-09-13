@@ -19,7 +19,7 @@ Usage:
 8. Enable this post processing script from the toolbar menu: Extensions -> Post Processing -> Modify G-Code -> Add a Script -> Qidi Dual Extruder Fix For Cura .
 9. Paste the first line of the start gcode into the field 'First line of start GCode'. The default value for this field is "G28".
 
-Start GCode for the QIDI I-Fast
+Start GCode for the QIDI I-Fast for Cura
 -------------------
 ```
 G28
