@@ -2,7 +2,7 @@
 A Post Processing script for Ultimaker's Cura to fix the issue with QIDI 3D printers with dual extruders
 
 
-This script removes the gcode command "T0" that Cura inserts before the start gcode when Cura automatically sets the temperatures (this occurs when the temperatures are not set in the start gcode). It will then also add the tool number to the temperature setters that Cura automatically adds before the start gcode.
+This script removes the gcode command "T0" that Cura inserts before the start gcode when Cura automatically sets the nozzle temperatures (this occurs when the nozzle temperatures are not set in the start gcode). It will then also add the tool number to the nozzle temperature setters that Cura automatically adds before the start gcode.
 
 This is needed when using the QIDI I-Fast printer, otherwise the added "T0" gcode will trigger the printer to execute the internal firmware toolchange gcode, which moves the whole extruder towards the printer sidewall to mechanically engage the tool. If the extruder position is not correct this will cause the extruder to continously bang against the sidewall.
 
