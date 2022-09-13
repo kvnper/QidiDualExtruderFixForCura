@@ -6,6 +6,8 @@ This script removes the gcode command "T0" that Cura inserts before the start gc
 
 This is needed when using the QIDI I-Fast printer, otherwise the added "T0" gcode will trigger the printer to execute the internal firmware toolchange gcode, which moves the whole extruder towards the printer sidewall to mechanically engage the tool. If the extruder position is not correct this will cause the extruder to continously bang against the sidewall.
 
+The purge line will need to be removed from the start gcode for the I-Fast as it will cause the printer to try and extrude with disabled extruders.
+
 
 Usage:
 -------------------
